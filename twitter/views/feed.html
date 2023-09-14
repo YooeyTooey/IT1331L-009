@@ -18,8 +18,7 @@
         async function loadTweets() {
         const tweetContainer = document.getElementById('tweet-container');
         const user = await getUserDetails("ProgrammersMeme");
-        const tweetData = await getUserTweet(new GetTweetsQueryParams(
-        user.username, user.user_id, false, 40));
+        const tweetData = await getUserTweet(new GetTweetsQueryParams( user.username, user.user_id, false, 40));
         tweetData.results.forEach(data => {
         const tweetElement = document.createElement('div');
         tweetElement.classList.add('tweet');
